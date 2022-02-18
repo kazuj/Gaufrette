@@ -489,7 +489,7 @@ class Ftp implements Adapter, FileFactory, ListKeysAware, SizeCalculator
      */
     private function isConnected()
     {
-        return is_resource($this->connection);
+        return $this->connection !== null;
     }
 
     /**
